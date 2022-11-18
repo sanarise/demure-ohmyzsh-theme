@@ -4,11 +4,13 @@ get_status() {
   if [[ "$OSTYPE" == "darwin"* ]]; then
     # MacOS
     os_symbol=""
+    os_color="magenta"
   else
     # Other
     os_symbol="λ"
+    os_color="green"
   fi
-  echo "%(?:%{$fg_bold[magenta]%}$os_symbol:%{$fg_bold[red]%}$os_symbol)%{$reset_color%}"
+  echo "%(?:%{$fg_bold[$os_color]%}$os_symbol:%{$fg_bold[red]%}$os_symbol)%{$reset_color%}"
 } 
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[245]%}git:(%{$FG[250]%}"
