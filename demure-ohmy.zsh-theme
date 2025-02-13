@@ -1,13 +1,13 @@
-# My theme
+# Use https://www.nerdfonts.com/#home for correct symbols
 
 get_status() {
   if [[ "$OSTYPE" == "darwin"* ]]; then
     # MacOS
-    os_symbol=""
+    os_symbol="\uf302" # nf-linux-apple
     os_color="magenta"
   else
     # Other
-    os_symbol="λ"
+    os_symbol="\uebca" # nf-cod-terminal_bash
     os_color="green"
   fi
   echo "%(?:%{$fg_bold[$os_color]%}$os_symbol:%{$fg_bold[red]%}$os_symbol)%{$reset_color%}"
