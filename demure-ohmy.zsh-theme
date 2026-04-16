@@ -7,11 +7,11 @@ get_status() {
     os_color="magenta"
   elif [[ -f "/etc/astra_version" ]]; then
     # Astra
-    os_symbol="\uf4cd"
+    os_symbol="\ue370" # nf-weather-stars
     os_color="blue"
   elif [[ -f "/etc/debian_version" ]]; then
     # Debian
-    os_symbol="\uf306"
+    os_symbol="\uf306" # nf-linux-debian
     os_color="magenta"
   else
     # Other
